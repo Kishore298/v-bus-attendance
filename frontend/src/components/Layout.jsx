@@ -31,7 +31,7 @@ const NAV_BY_ROLE = {
     { to: '/payroll', label: 'Payroll & Payslips', icon: Wallet },
     { to: '/reports', label: 'Reports & Exports', icon: FileBarChart2 },
     { to: '/audit-logs', label: 'Audit Trail', icon: History },
-    { to: '/settings', label: 'Users & Company', icon: Settings },
+    { to: '/settings', label: 'User Accounts', icon: Settings },
   ],
   SUPERVISOR: [
     { to: '/', label: 'Supervisor Hub', icon: LayoutDashboard },

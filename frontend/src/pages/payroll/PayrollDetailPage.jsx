@@ -6,7 +6,7 @@ import { payrollApi } from '../../api/endpoints';
 import { Modal } from '../../components/Modal';
 import { StatCard, TableSkeleton } from '../../components/Skeleton';
 import { StatusBadge } from '../../components/StatusBadge';
-import { downloadBlob, formatCurrency, getErrorMessage } from '../../utils/format';
+import { downloadBlob, formatCurrency, getErrorMessage, amountToIndianWords } from '../../utils/format';
 
 export function PayrollDetailPage() {
   const { id } = useParams();
@@ -281,9 +281,14 @@ export function PayrollDetailPage() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-xl p-4 flex items-center justify-between shadow-sm">
-              <span className="font-extrabold tracking-wide">NET PAYABLE SALARY</span>
-              <span className="text-xl font-extrabold">{formatCurrency(previewItem.netPayable)}</span>
+            <div className="bg-gradient-to-r from-orange-50 to-amber-50/70 border-l-4 border-l-orange-600 border border-orange-200 rounded-xl p-4 flex flex-wrap items-center justify-between gap-2">
+              <div>
+                <span className="block text-[11px] font-extrabold uppercase tracking-wider text-orange-700">
+                  NET PAYABLE SALARY
+                </span>
+                <span className="text-xs text-slate-600">{amountToIndianWords(previewItem.netPayable)}</span>
+              </div>
+              <span className="text-xl font-extrabold text-orange-800">{formatCurrency(previewItem.netPayable)}</span>
             </div>
 
             <div className="flex justify-end gap-2 no-print">

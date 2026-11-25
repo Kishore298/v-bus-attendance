@@ -143,9 +143,10 @@ export function calculateEmployeePayroll({
   return {
     employeeId: employee._id,
     companySnapshot: {
-      companyName: companyConfig.companyName || 'V-Bus Transport Operations',
+      companyName: companyConfig.companyName || 'V Bus Holidays',
       companyAddress:
-        companyConfig.companyAddress || 'Central Depot, Main Highway Road, Transport Nagar',
+        companyConfig.companyAddress ||
+        'Connecting to City • Central Bus Depot, NH-48 Highway, Transport Nagar',
       companyLogoText: companyConfig.companyLogoText || 'V-BUS',
       currencySymbol: companyConfig.currencySymbol || '₹',
     },

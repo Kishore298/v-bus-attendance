@@ -18,8 +18,8 @@ export async function ensureDemoSeed() {
     {
       $setOnInsert: {
         key: 'COMPANY_CONFIG',
-        companyName: 'V-Bus Transport Operations',
-        companyAddress: 'Central Bus Depot, NH-48 Highway, Transport Nagar',
+        companyName: 'V Bus Holidays',
+        companyAddress: 'Connecting to City • Central Bus Depot, NH-48 Highway, Transport Nagar',
         companyLogoText: 'V-BUS',
         companyPhone: '+91 98765 43210',
         currencySymbol: '₹',
